@@ -1,0 +1,59 @@
+@import '../../../mixins.scss';
+
+.advantages {
+  &__wrapper {
+    @include wrapper(1230px);
+    padding: 73px 30px 125px;
+  }
+
+  &__title {
+    @include title(50px, 60px);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    width: 370px;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    &--uniq {
+      background-image: url('./img/uniqueness-icon.png');
+    }
+
+    &--flex {
+      background-image: url('./img/flexibility-icon.png');
+    }
+
+    &--group {
+      background-image: url('./img/group-icon.png');
+    }
+
+    &-title {
+      margin: 0;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #dc001f;
+      opacity: 0.75;
+    }
+
+    &-description {
+      text-align: center;
+      padding: 0 50px;
+      font-style: 16px;
+      line-height: 22px;
+    }
+  }
+}

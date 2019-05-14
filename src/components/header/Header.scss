@@ -1,0 +1,60 @@
+@import '../../mixins.scss';
+
+.page-header {
+  width: 100%;
+  background-color: #000;
+
+  &__wrapper {
+    @include wrapper(1230px);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .page-logo {
+    width: 130px;
+    height: 63px;
+    margin-right: 70px;
+
+    a {
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .user-block {
+    margin-left: auto;
+    margin-right: 10px;
+
+    &__link {
+      display: block;
+      padding-right: 77px;
+      font-size: 15px;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-image: url('./img/user-icon.png');
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@mixin wrapper($width) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+@mixin title($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #fff;
+  }
+}
+
+@mixin hidden() {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

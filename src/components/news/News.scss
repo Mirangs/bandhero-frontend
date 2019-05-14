@@ -1,0 +1,26 @@
+@import '../../mixins.scss';
+
+.news {
+  background-color: #404040;
+  color: #ffffff;
+
+  &__wrapper {
+    @include wrapper(1230px);
+
+    min-height: calc(100vh - 103px - 195px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 30px;
+  }
+
+  .news-content {
+    max-width: 700px;
+    margin-right: 30px;
+  }
+
+  &__title {
+    @include title(50px, 60px);
+  }
+}

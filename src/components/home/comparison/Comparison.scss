@@ -1,0 +1,71 @@
+@import '../../../mixins.scss';
+
+.comparison {
+  &__wrapper {
+    @include wrapper(1230px);
+    padding: 80px 30px 85px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 700;
+
+    th, td {
+      padding: 25px;
+      border: 1px solid #fff;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #1e1e1e;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #292929;
+    }
+
+    th {
+      font-size: 30px;
+      line-height: 30px;
+      background-color: #780011;
+      text-transform: uppercase;
+
+      &:first-child {
+        width: 33%;
+      }
+
+      &:nth-child(2) {
+        width: 35%;
+      }
+    }
+
+    td {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .excess {
+      border: none;
+      background-color: transparent;
+    }
+
+    .comparison__yes-cell,
+    .comparison__no-cell {
+      font-size: 0;
+      vertical-align: middle;
+      padding-bottom: 15px;
+    }
+
+    .comparison__yes-cell img {
+      width: 40px;
+      height: 30px;
+    }
+
+    .comparison__no-cell img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

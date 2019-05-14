@@ -1,0 +1,59 @@
+@import '../../../mixins.scss';
+
+.first-screen {
+  padding: 225px 0 300px;
+  background-image: url('./img//background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    @include wrapper(1230px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+
+    span {
+      display: block;
+      font-size: 34px;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 0 60px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    line-height: 70px;
+    background-color: #a50017;
+    border-radius: 6px;
+    box-shadow: inset 0 0 7px 0px #f89c9c,
+                      0 0 20px -5px #f89c9c;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
