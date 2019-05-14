@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './LoginModal.scss';
 
-const loginContainer = document.querySelector('#login-modal');
+const loginContainer = document.querySelector('#loginModal');
 
 const LoginModal = ({ onModalClose }) => {
   return (

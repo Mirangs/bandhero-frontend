@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .overlay {
   background-color: rgba(0,0,0,0.5);
   position: fixed;
@@ -188,6 +190,28 @@
 
     &::before {
       transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .overlay {
+    padding: 150px 10px;
+  }
+
+  .login-modal {
+    width: 100%;
+    padding: 30px 10px;
+
+    &__close {
+      width: 20px;
+      height: 20px;
+      left: -40px;
+      top: 15px;
+    }
+
+    &__remember {
+      margin-bottom: 10px;
     }
   }
 }

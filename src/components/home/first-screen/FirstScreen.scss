@@ -1,4 +1,5 @@
 @import '../../../mixins.scss';
+@import '../../../variables.scss';
 
 .first-screen {
   padding: 225px 0 300px;
@@ -54,6 +55,18 @@
 
     &:active {
       opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .first-screen {
+    padding: 100px 0;
+    background-position: -170px 0;
+
+    &__title {
+      font-size: 35px;
+      line-height: 40px;
     }
   }
 }

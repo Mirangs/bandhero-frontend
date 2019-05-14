@@ -1,4 +1,5 @@
 @import '../../mixins.scss';
+@import '../../variables.scss';
 
 @mixin link {
   color: #fff;
@@ -28,6 +29,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .column:nth-of-type(1) {
@@ -220,6 +222,56 @@
 
       &:active {
         opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .page-footer {
+    &__wrapper {
+      justify-content: center;
+    }
+
+    .column:nth-of-type(1) {
+      margin-right: 0;
+    }
+
+    .column:nth-of-type(2) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-nav,
+    .footer-support,
+    .footer-legal {
+      margin-right: 0;
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    .footer-nav {
+      margin-bottom: 30px;
+
+      &__title {
+        margin-bottom: 10px;
+      }
+    }
+
+    .footer-support {
+      margin-bottom: 30px;
+
+      &__title {
+        margin-bottom: 10px;
+      }
+    }
+
+    .footer-social {
+      text-align: center;
+
+      span {
+        display: block;
+        margin-bottom: 10px;
       }
     }
   }

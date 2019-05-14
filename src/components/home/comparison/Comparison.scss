@@ -1,4 +1,5 @@
 @import '../../../mixins.scss';
+@import '../../../variables.scss';
 
 .comparison {
   &__wrapper {
@@ -66,6 +67,28 @@
     .comparison__no-cell img {
       width: 32px;
       height: 32px;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .comparison {
+    &__wrapper {
+      padding: 50px 10px 50px;
+    }
+
+    th, td {
+      font-size: 14px;
+      line-height: 16px;
+      width: 50%;
+    }
+
+    .excess {
+      display: none;
+    }
+
+    &__label {
+      display: none;
     }
   }
 }

@@ -1,4 +1,5 @@
 @import '../../../mixins.scss';
+@import '../../../variables.scss';
 
 .advantages {
   &__wrapper {
@@ -18,10 +19,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__item {
-    width: 370px;
+    flex-basis: 370px;
     padding-top: 100px;
     background-repeat: no-repeat;
     background-position: 50% 0;
@@ -54,6 +56,27 @@
       padding: 0 50px;
       font-style: 16px;
       line-height: 22px;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .advantages {
+    &__wrapper {
+      padding: 50px 10px;
+    }
+
+    &__list {
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &__item {
+      margin-bottom: 20px;
     }
   }
 }

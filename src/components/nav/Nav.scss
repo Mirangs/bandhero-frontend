@@ -1,5 +1,13 @@
+@import '../../variables.scss';
+
+.page-menu {
+  display: flex;
+  flex-grow: 1;
+}
+
 .main-nav {
   max-width: 770px;
+  margin-right: auto;
 
   &__list {
     margin: 0;
@@ -41,6 +49,36 @@
 
     &--active {
       border-bottom: 2px solid #fff;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .page-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  .main-nav {
+    margin-right: 0;
+
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__item {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      text-align: center;
     }
   }
 }

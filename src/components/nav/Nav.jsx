@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import './Nav.scss';
 
-const Nav = () => {
+const Nav = ({ onModalOpen }) => {
   return (
+    <section className="page-menu">
     <nav className="main-nav">
       <ul className="main-nav__list">
         <li className="main-nav__item">
@@ -24,6 +25,11 @@ const Nav = () => {
         </li>
       </ul>
     </nav>
+
+    <section className="user-block">
+      <Link className="user-block__link" to="/login" onClick={onModalOpen}>Log in</Link>
+    </section>
+    </section>
   )
 }
 

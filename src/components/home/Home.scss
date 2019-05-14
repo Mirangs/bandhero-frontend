@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .guitar-decoration {
   background-color: #282828;
   background-image: url('./img/guitar.png');
@@ -6,4 +8,10 @@
   background-size: 1754px 980px;
   background-color: #282828;
   color: #fff;
+}
+
+@media (max-width: $media-tablet-width) {
+  .guitar-decoration {
+    background-image: none;
+  }
 }

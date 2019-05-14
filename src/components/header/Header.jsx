@@ -7,6 +7,11 @@ import './Header.scss';
 import pageLogo from './img/page-logo.png';
 
 const Header = ({ onModalOpen }) => {
+  const onBurgerClick = () => {
+    const menu = document.querySelector('.page-menu');
+    menu.classList.toggle('page-menu--open');
+  }
+
   return (
     <header className="page-header">
       <div className="page-header__wrapper">
@@ -16,11 +21,8 @@ const Header = ({ onModalOpen }) => {
           </Link>
         </div>
 
-        <Nav />
-
-        <section className="user-block">
-          <Link className="user-block__link" to="/login" onClick={onModalOpen}>Log in</Link>
-        </section>
+        <button className="burger" onClick={onBurgerClick}>Open menu</button>
+        <Nav onModalOpen={onModalOpen}/>
       </div>
     </header>
   )

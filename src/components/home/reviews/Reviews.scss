@@ -1,4 +1,5 @@
 @import '../../../mixins.scss';
+@import '../../../variables.scss';
 
 .reviews {
   background-color: #282828;
@@ -64,5 +65,32 @@
     height: 65px;
     color: transparent;
     
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .reviews {
+    &__wrapper {
+      padding: 250px 10px 50px;
+      background-position: 50% 70px;
+    }
+
+    .slide {
+      padding: 0;
+      margin: 5px;
+
+      &__review {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    .slick-arrow {
+      display: none;
+    }
+
+    .slick-active > div {
+      padding: 0;
+    }
   }
 }

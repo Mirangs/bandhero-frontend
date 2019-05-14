@@ -1,4 +1,5 @@
 @import '../../../mixins.scss';
+@import '../../../variables.scss';
 
 .cta {
   background-color: #404040;
@@ -55,6 +56,24 @@
 
     &:active {
       opacity: 0.6;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-width) {
+  .cta {
+    &__wrapper {
+      padding: 100px 10px;
+    }
+
+    &__slogan {
+      font-size: 24px;
+      line-height: 30px;
+
+      span {
+        font-size: 20px;
+        line-height: 25px;
+      }
     }
   }
 }
