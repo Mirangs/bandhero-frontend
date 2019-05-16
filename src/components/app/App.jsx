@@ -43,7 +43,7 @@ const App = () => {
         <Route path='/news' component={News} />
         <Route path='/subscription' component={Subscription} />
         <Route path='/contacts' component={Contacts} />
-        <Route path='/cabinet' component={() => <Cabinet onLogout={onLogout} isLogged={isLogged} />}/>
+        <Route path='/cabinet' component={() => <Cabinet onLogout={onLogout} isLogged={isLogged} user={user} />}/>
         <Route path='/register' component={Register} />
         <Route component={NotFound} />
       </Switch>

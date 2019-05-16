@@ -23,35 +23,34 @@ const LoginModal = ({ onModalClose, setUser, setIsLogged }) => {
       'credentials': 'include',
       'body': JSON.stringify({
         name: loginField.current.value,
-        password: passwordField.current.value
+        pass: passwordField.current.value
       })
     }
     const api_call = await fetch('/api/user', settings);
     const request = await api_call.json();
     if (request.status) {
-      setStatus(request.status);
+      console.log('true');
+      setStatus(request.message);
     } else {
       setIsLogged(true);
       setUser(request[0]);
       onModalClose();
-    }
-    
-    
+    }    
   }
 
   return (
     <div className="overlay">
       <section className="login-modal">
-        <form>
+        <form onSubmit={loginUser}>
           <h3 className="login-modal__title">Log in</h3>
 
           <label className="login-modal__field">
             Login
-            <input type="text" id="login-field" ref={loginField}/>
+            <input type="text" id="login-field" ref={loginField} required/>
           </label>
           <label className="login-modal__field">
             Password
-            <input type="password" id="password-field" ref={passwordField}/>
+            <input type="password" id="password-field" ref={passwordField} required/>
           </label>
 
           <div className="layout">
@@ -67,7 +66,7 @@ const LoginModal = ({ onModalClose, setUser, setIsLogged }) => {
             status && <p className="status-error" style={{color: 'red'}}>{status}</p>
           }
 
-          <button type="submit" className="login-modal__login" onClick={loginUser}>Log in</button>
+          <button type="submit" className="login-modal__login">Log in</button>
           <Link to="/register" className="login-modal__register" onClick={onModalClose}>Register</Link>
         </form>
       </section>
