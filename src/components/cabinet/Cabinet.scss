@@ -1,0 +1,12 @@
+@import '../../mixins.scss';
+
+.user-cabinet {
+  background-color: #404040;
+  color: #fff;
+
+  &__wrapper {
+    @include wrapper(1230px);
+    padding: 50px 30px;
+    min-height: calc(100vh - 195px - 103px);
+  }
+}

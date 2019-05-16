@@ -9,11 +9,14 @@ import About from '../about/About';
 import News from '../news/News';
 import Subscription from '../subscription/Subscription';
 import Contacts from '../contacts/Contacts';
+import Cabinet from '../cabinet/Cabinet';
 import NotFound from '../404/404';
 import LoginModal from '../login-modal/LoginModal';
 
 const App = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
+  const [user, setUser] = useState({});
 
   const onModalClose = () => {
     setIsPopupOpen(false);
@@ -24,9 +27,14 @@ const App = () => {
     setIsPopupOpen(true);
   }
 
+  const onLogout = () => {
+    setIsLogged(false);
+    setUser({});
+  }
+
   return (
     <Router>
-      <Header onModalOpen={onModalOpen}/>
+      <Header onModalOpen={onModalOpen} isLogged={isLogged} login={user.login}/>
 
       <Switch>
         <Route path='/' component={() => <Home onModalOpen={onModalOpen} />} exact />
@@ -34,6 +42,7 @@ const App = () => {
         <Route path='/news' component={News} />
         <Route path='/subscription' component={Subscription} />
         <Route path='/contacts' component={Contacts} />
+        <Route path='/cabinet' component={() => <Cabinet onLogout={onLogout} isLogged={isLogged} />}/>
         <Route component={NotFound} />
       </Switch>
 
@@ -41,7 +50,7 @@ const App = () => {
 
       {
         isPopupOpen ?
-        <LoginModal onModalClose={onModalClose}/> : null
+        <LoginModal onModalClose={onModalClose} setIsLogged={setIsLogged} setUser={setUser}/> : null
       }
     </Router>
   )

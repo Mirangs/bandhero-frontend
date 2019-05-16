@@ -1,0 +1,16 @@
+@import '../../mixins.scss';
+
+.not-found {
+  background-color: #404040;
+  color: #fff;
+
+  &__wrapper {
+    @include wrapper(1230px);
+    padding: 100px 30px;
+    min-height: calc(100vh - 195px - 103px);
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

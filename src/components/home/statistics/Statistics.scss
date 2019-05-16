@@ -75,5 +75,9 @@
       flex-basis: 100%;
       margin-bottom: 40px;
     }
+
+    &::after {
+      border-left: solid 100vw #404040;
+    }
   }
 }

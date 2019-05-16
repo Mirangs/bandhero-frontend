@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { scrollOnTop } from '../../utils';
 
 import pageLogo from '../header/img/page-logo.png';
 
@@ -23,7 +24,7 @@ const Footer = () => {
         </div>
 
         <div className="column">
-          <nav className="footer-nav">
+          <nav className="footer-nav" onClick={scrollOnTop}>
             <ul className="footer-nav__list">
               <li className="footer-nav__item">
                 <NavLink className="footer-nav__link" to="/">Home</NavLink>

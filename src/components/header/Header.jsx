@@ -6,7 +6,7 @@ import Nav from '../nav/Nav';
 import './Header.scss';
 import pageLogo from './img/page-logo.png';
 
-const Header = ({ onModalOpen }) => {
+const Header = ({ onModalOpen, isLogged, login }) => {
   const onBurgerClick = () => {
     const menu = document.querySelector('.page-menu');
     menu.classList.toggle('page-menu--open');
@@ -22,7 +22,7 @@ const Header = ({ onModalOpen }) => {
         </div>
 
         <button className="burger" onClick={onBurgerClick}>Open menu</button>
-        <Nav onModalOpen={onModalOpen}/>
+        <Nav onModalOpen={onModalOpen} isLogged={isLogged} login={login}/>
       </div>
     </header>
   )

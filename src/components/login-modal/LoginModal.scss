@@ -154,7 +154,8 @@
 
   &__close {
     position: relative;
-    left: 50px;
+    top: 10px;
+    right: -30px;
     font-size: 0;
     border: none;
     margin: 0;
@@ -194,9 +195,13 @@
   }
 }
 
+.status-error {
+  margin-top: 0;
+}
+
 @media (max-width: $media-tablet-width) {
   .overlay {
-    padding: 150px 10px;
+    padding: 20px 10px;
   }
 
   .login-modal {
@@ -206,12 +211,39 @@
     &__close {
       width: 20px;
       height: 20px;
-      left: -40px;
+      right: 35px;
       top: 15px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__field {
+      font-size: 16px;
+      line-height: 20px;
     }
 
     &__remember {
       margin-bottom: 10px;
+    }
+
+    &__login {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px;
+    }
+
+    &__register {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__forget-link {
+      flex-basis: 100%;
     }
   }
 }

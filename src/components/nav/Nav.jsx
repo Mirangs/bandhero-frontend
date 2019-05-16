@@ -2,11 +2,15 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import './Nav.scss';
+import { closeNav, scrollOnTop } from '../../utils';
 
-const Nav = ({ onModalOpen }) => {
+const Nav = ({ onModalOpen, isLogged, login }) => {
   return (
     <section className="page-menu">
-    <nav className="main-nav">
+    <nav className="main-nav" onClick={() => {
+      scrollOnTop();
+      closeNav();
+    }}>
       <ul className="main-nav__list">
         <li className="main-nav__item">
           <NavLink className="main-nav__link" activeClassName='main-nav__link--active' to='/' exact>Home</NavLink>
@@ -27,7 +31,11 @@ const Nav = ({ onModalOpen }) => {
     </nav>
 
     <section className="user-block">
-      <Link className="user-block__link" to="/login" onClick={onModalOpen}>Log in</Link>
+      {
+        isLogged ?
+        <Link to="/cabinet" className="cabinet-link">{login}</Link>
+        : <Link className="user-block__link" to="/login" onClick={onModalOpen}>Log in</Link>
+      }
     </section>
     </section>
   )

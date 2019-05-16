@@ -3,6 +3,7 @@
 .page-menu {
   display: flex;
   flex-grow: 1;
+  text-align: center;
 }
 
 .main-nav {
@@ -50,6 +51,27 @@
     &--active {
       border-bottom: 2px solid #fff;
     }
+  }
+}
+
+.cabinet-link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+  height: 100%;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(70, 70, 70);
+  border-radius: 5px;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
