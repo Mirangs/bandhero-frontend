@@ -12,6 +12,7 @@ import Contacts from '../contacts/Contacts';
 import Cabinet from '../cabinet/Cabinet';
 import NotFound from '../404/404';
 import LoginModal from '../login-modal/LoginModal';
+import Register from '../register/Register';
 
 const App = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
         <Route path='/subscription' component={Subscription} />
         <Route path='/contacts' component={Contacts} />
         <Route path='/cabinet' component={() => <Cabinet onLogout={onLogout} isLogged={isLogged} />}/>
+        <Route path='/register' component={Register} />
         <Route component={NotFound} />
       </Switch>
 
