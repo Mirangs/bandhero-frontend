@@ -32,7 +32,7 @@ const LoginModal = ({ onModalClose }) => {
           </div>
 
           <button type="submit" className="login-modal__login">Log in</button>
-          <Link to="/register" className="login-modal__register">Register</Link>
+          <Link to="/register" className="login-modal__register" onClick={onModalClose}>Register</Link>
         </form>
       </section>
       <button className="login-modal__close" onClick={onModalClose}>Close modal</button>

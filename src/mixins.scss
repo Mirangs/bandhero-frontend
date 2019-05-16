@@ -34,3 +34,25 @@
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
+
+@mixin button($bg-color, $color, $fsize) {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: $bg-color;
+  color: $color;
+  padding: 20px 50px;
+  font-size: $fsize;
+  line-height: 1.2em;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
