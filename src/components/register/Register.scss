@@ -70,5 +70,15 @@
 
     &__register-btn {
         @include button(#000, #fff, 24px);
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    &__error {
+        width: 100%;
+        color: red;
     }
 }

@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "bandhero",
     "public": "build",
     "ignore": [
       "firebase.json",

@@ -20,16 +20,14 @@ const LoginModal = ({ onModalClose, setUser, setIsLogged }) => {
         'Content-Type': 'application/json'
       },
       'method': 'POST',
-      'credentials': 'include',
       'body': JSON.stringify({
         name: loginField.current.value,
         pass: passwordField.current.value
       })
     }
-    const api_call = await fetch('/api/user', settings);
+    const api_call = await fetch('https://band-hero-backend.herokuapp.com/api/user', settings);
     const request = await api_call.json();
     if (request.status) {
-      console.log('true');
       setStatus(request.message);
     } else {
       setIsLogged(true);
